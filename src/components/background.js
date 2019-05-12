@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,20 +13,30 @@ import Img from "gatsby-image"
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
 
-const Image = () => (
+const BackgroundSection = ({children: kids}) => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        desktop: file(relativePath: { eq: "bg-bar.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(quality: 90, maxWidth: 1200) {
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => {
+      const imageData = data.desktop.childImageSharp.fluid
+      return (
+      <BackgroundImage  fluid={data.desktop.childImageSharp.fluid} 
+                        backgroundColor={`#000000`}
+                        fadeIn="true">
+        {kids} 
+        </BackgroundImage>
+        )
+    }}
   />
 )
-export default Image
+// StaticQuery trys to render children or render method - causing the children closure to fail - thus renaming to kids works
+export default BackgroundSection
