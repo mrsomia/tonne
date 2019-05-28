@@ -9,16 +9,15 @@ const Header = ({ siteTitle }) => (
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: `1.45rem `,
       }}
     >
-      <h1 className="ph3 di" style={{ marginRight: `auto`}}>
+      <h1 className="ph3 di" style={{ marginRight: `auto`, padding: `0 auto`}}>
         <Link
           to="/"
           style={{
             color: `white`,
             textDecoration: `none`,
-            padding: `0 auto 0 0`,
           }}
         >
           {siteTitle}
@@ -29,6 +28,7 @@ const Header = ({ siteTitle }) => (
           to="/menu"
           style={{
             textDecoration: `none`,
+            color: `white`,
           }}
         >
           Menu
