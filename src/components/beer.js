@@ -13,8 +13,5 @@ export default ({ name, label_image, brewery, abv, style}) => {
 		  	<span className="f6 db">8.0%</span>
 				<span className="f6 db">IPA - Imperial / Double</span>
 		  </div>
-			<div className="pl3 flex-auto">
-				<span className="f6 db">hello</span>
-			</div>
 	  </li>
 )}
