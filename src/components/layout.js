@@ -10,7 +10,10 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import tachyons from 'tachyons'
+import Footer from "./footer"
+// import tachyons from 'tachyons'
+// import "./layout.css"
+import "./tachyons.css"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,10 +27,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className="sans-serif bg-black white">
         <Header siteTitle={data.site.siteMetadata.title} />
           {children}
-      </>
+        <Footer />
+      </div>
     )}
   />
 )

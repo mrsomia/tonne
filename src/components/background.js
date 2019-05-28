@@ -27,7 +27,6 @@ const BackgroundSection = ({children: kids}) => (
       }
     `}
     render={data => {
-      const imageData = data.desktop.childImageSharp.fluid
       return (
       <BackgroundImage  fluid={data.desktop.childImageSharp.fluid} 
                         backgroundColor={`#000000`}
