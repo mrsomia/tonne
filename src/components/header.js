@@ -15,10 +15,7 @@ const Header = ({ siteTitle }) => (
       <h1 className="ph3 di" style={{ marginRight: `auto`, padding: `0 auto`}}>
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+          className="no-underline white"
         >
           {siteTitle}
         </Link>
@@ -26,10 +23,7 @@ const Header = ({ siteTitle }) => (
       <h1 className="ph3 di" style={{ padding: `0 auto`}}>
         <Link
           to="/menu"
-          style={{
-            textDecoration: `none`,
-            color: `white`,
-          }}
+          className="no-underline white"
         >
           Menu
         </Link>
@@ -43,7 +37,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Tønne`,
 }
 
 export default Header
