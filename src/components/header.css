@@ -1,9 +1,3 @@
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background-color: #000000; */
-}
 /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */    
@@ -39,7 +33,7 @@ body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover, .overlay a:focus, .overlay span:hover, .overlay span:focus {
   color: #f1f1f1;
 }
 
@@ -53,7 +47,7 @@ body {
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
-  .overlay span {font-size: 20px}
+  .overlay span, .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;

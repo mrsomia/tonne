@@ -12,10 +12,10 @@ const Header = ({siteTitle}) => {
     <div id="navigation-dropdown" className="overlay">
       <span className="closebtn white bg-black pointer" onClick={closeNav}>&times;</span>
       <div className="overlay-content">
-        <Link to="/" onClick={closeNav}>Home</Link>
-        <Link to="/menu" onClick={closeNav}>Menu</Link>
-        <Link to="/" onClick={closeNav}>Clients</Link>
-        <Link to="/" onClick={closeNav}>Contact</Link>
+        <Link className="f2" to="/" onClick={closeNav}>Home</Link>
+        <Link className="f2" to="/menu" onClick={closeNav}>Menu</Link>
+        <Link className="f2" to="/page-2" onClick={closeNav}>Page 2</Link>
+        <Link className="f2" to="/404" onClick={closeNav}>404</Link>
       </div>
     </div>
   </div>
