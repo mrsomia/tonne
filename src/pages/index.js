@@ -21,8 +21,10 @@ const IndexPage = () => (
       <div className="pa2 ph3 pa3-ns w-30-ns">
         <p className="f3">You can find us at 1-3 St Martins, Leicester LE1 5DG. Or just click <a className="yellow no-underline" href="https://goo.gl/maps/uE4YVrMRBZGN7zuMA">here</a></p>
         <span className="f3">We're open from:</span>
-        <ul className="list">
-          <li className="f4">Tues-</li>
+        <ul className="list pl0">
+          <li className="f4 flex"><span className="i" style={{marginRight: `auto`}}>Tues-Sat</span> <span>12-Late</span></li>
+          <li className="f4 flex"><span className="i" style={{marginRight: `auto`}}>Sun</span> <span>1-Late</span></li>
+          <li className="f4 flex"><span className="i" style={{marginRight: `auto`}}>Mon</span> <span>We Sleep</span></li>
         </ul>
       </div>
     </div>
