@@ -5,7 +5,7 @@ import data from "../components/data.json"
 
 const menuPage = () => {
 	// console.log(data)
-	const [onTap, setOnTap] = useState(true)
+	// const [onTap, setOnTap] = useState(true)
 	const beers = data.menu.sections[0].items.map(({ id, name, label_image, brewery, abv, style}) => (
 		<Beer id={id} name={name} label_image={label_image} brewery={brewery} abv={abv} beerStyle={style} />
 		))
@@ -21,7 +21,7 @@ const menuPage = () => {
 					<button className="f6 link dim ph3 pv2 mb2 dib white bg-mid-gray">BØTTLES</button>
 				</div>
 			</div>
-			<ul class="list pl0 mt1 measure center">
+			<ul className="list pl0 mt1 measure center">
 				{beers}
 			</ul>
 		</Layout>)
