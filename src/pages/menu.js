@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Beer from "../components/beer";
 import Layout from '../components/layout';
+import data from "../components/data.json"
 
-export default () => {
+const menuPage = () => {
 	// console.log(data)
+	const [onTap, setOnTap] = useState(true)
+	const beers = data.menu.sections[0].items.map(({ id, name, label_image, brewery, abv, style}) => (
+		<Beer id={id} name={name} label_image={label_image} brewery={brewery} abv={abv} beerStyle={style} />
+		))
+
 	return(
 		<Layout>
 			<h1 className="tc"> Here's what we have øn tap...</h1>
@@ -16,10 +22,9 @@ export default () => {
 				</div>
 			</div>
 			<ul class="list pl0 mt1 measure center">
-				<Beer />
-				<Beer />
-				<Beer />
-				<Beer />
+				{beers}
 			</ul>
 		</Layout>)
 }
+
+export default menuPage
