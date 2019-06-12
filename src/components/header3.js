@@ -38,8 +38,9 @@ const Header = ({siteTitle}) => {
           </Link>
         </div>
         <span className="white pointer absolute top-0 right-0 pa3 f1 dn-ns"
-        onClick={toggleNav}
-        >&times;</span>
+        onClick={toggleNav}>
+          &times;
+        </span>
     </div>
   )
 }
